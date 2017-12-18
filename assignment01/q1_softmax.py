@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def softmax(x):
-    if not isinstance(x):
+    if not isinstance(x, np.ndarray):
         x = np.array(x)
     x_exp = np.exp(x)
     return x_exp / sum(x_exp)
